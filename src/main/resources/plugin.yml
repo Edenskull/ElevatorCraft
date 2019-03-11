@@ -1,0 +1,10 @@
+name: OniLPCraft
+version: ${project.version}
+main: fr.edenskull.onilpcraft.OniLPCraft
+api-version: 1.13
+authors: [Edenskull]
+description: Plugin for basics LP Commands
+commands:
+  lp:
+    description: This is the main LP command
+    usage: /lp
