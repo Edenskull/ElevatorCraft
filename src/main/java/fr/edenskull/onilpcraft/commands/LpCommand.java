@@ -1,7 +1,7 @@
 package fr.edenskull.onilpcraft.commands;
 
 import fr.edenskull.onilpcraft.OniLPCraft;
-import org.bukkit.Color;
+import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -45,9 +45,9 @@ public class LpCommand implements CommandExecutor {
 	}
 
 	private ItemStack createSword() {
-		String swordName = (Color.RED + "LP Sword");
+		String swordName = (ChatColor.RED + "LP Sword");
 		List<String> lores = new ArrayList<>();
-		String lore = (Color.TEAL + "It says that this is a streamer Sword");
+		String lore = (ChatColor.AQUA + "It says that this is a streamer Sword");
 		lores.add(lore);
 
 		ItemStack item = new ItemStack(Material.DIAMOND_SWORD);
@@ -68,9 +68,9 @@ public class LpCommand implements CommandExecutor {
 	}
 
 	private ItemStack createPickaxeSpeed() {
-		String pickaxeName = (Color.RED + "LP Pickaxe Speed");
+		String pickaxeName = (ChatColor.RED + "LP Pickaxe Speed");
 		List<String> lores = new ArrayList<>();
-		String lore = (Color.TEAL + "You should be able to break bedrock with it, Maybe");
+		String lore = (ChatColor.AQUA + "You should be able to break bedrock with it, Maybe");
 		lores.add(lore);
 
 		ItemStack item = new ItemStack(Material.DIAMOND_PICKAXE);
@@ -89,9 +89,9 @@ public class LpCommand implements CommandExecutor {
 	}
 
 	private ItemStack createPickaxeSilk() {
-		String pickaxeName = (Color.RED + "LP Pickaxe Silk");
+		String pickaxeName = (ChatColor.RED + "LP Pickaxe Silk");
 		List<String> lores = new ArrayList<>();
-		String lore = Color.TEAL + "With this you can mine air blocks";
+		String lore = ChatColor.AQUA + "With this you can mine air blocks";
 		lores.add(lore);
 
 		ItemStack item = new ItemStack(Material.DIAMOND_PICKAXE);
@@ -110,9 +110,9 @@ public class LpCommand implements CommandExecutor {
 	}
 
 	private ItemStack createAxe() {
-		String axeName = (Color.RED + "LP Axe");
+		String axeName = (ChatColor.RED + "LP Axe");
 		List<String> lores = new ArrayList<>();
-		String lore = (Color.TEAL + "It says that with one hit it makes a wood stere");
+		String lore = (ChatColor.AQUA + "It says that with one hit it makes a wood stere");
 		lores.add(lore);
 
 		ItemStack item = new ItemStack(Material.DIAMOND_AXE);
@@ -130,9 +130,9 @@ public class LpCommand implements CommandExecutor {
 	}
 
 	private ItemStack createHelmet() {
-		String axeName = (Color.RED + "LP Helmet");
+		String axeName = (ChatColor.RED + "LP Helmet");
 		List<String> lores = new ArrayList<>();
-		String lore = (Color.TEAL + "Can block even blood drip at full speed");
+		String lore = (ChatColor.AQUA + "Can block even blood drip at full speed");
 		lores.add(lore);
 
 		ItemStack item = new ItemStack(Material.DIAMOND_HELMET);
@@ -156,9 +156,9 @@ public class LpCommand implements CommandExecutor {
 	}
 
 	private ItemStack createChestplate() {
-		String chestplateName = (Color.RED + "LP Chestplate");
+		String chestplateName = (ChatColor.RED + "LP Chestplate");
 		List<String> lores = new ArrayList<>();
-		String lore = (Color.TEAL + "Visibly it can\'t be penetrate, Hope");
+		String lore = (ChatColor.AQUA + "Visibly it can\'t be penetrate, Hope");
 		lores.add(lore);
 
 		ItemStack item = new ItemStack(Material.DIAMOND_CHESTPLATE);
@@ -180,9 +180,9 @@ public class LpCommand implements CommandExecutor {
 	}
 
 	private ItemStack createLeggings() {
-		String leggingsName = (Color.RED + "LP Leggings");
+		String leggingsName = (ChatColor.RED + "LP Leggings");
 		List<String> lores = new ArrayList<>();
-		String lore = (Color.TEAL + "It\'s not a short, I guess");
+		String lore = (ChatColor.AQUA + "It\'s not a short, I guess");
 		lores.add(lore);
 
 		ItemStack item = new ItemStack(Material.DIAMOND_LEGGINGS);
@@ -204,9 +204,9 @@ public class LpCommand implements CommandExecutor {
 	}
 
 	private ItemStack createBoots() {
-		String leggingsName = (Color.RED + "LP Boots");
+		String leggingsName = (ChatColor.RED + "LP Boots");
 		List<String> lores = new ArrayList<>();
-		String lore = (Color.TEAL + "Visibly you can run faster, At least it is written");
+		String lore = (ChatColor.AQUA + "Visibly you can run faster, At least it is written");
 		lores.add(lore);
 
 		ItemStack item = new ItemStack(Material.DIAMOND_BOOTS);
