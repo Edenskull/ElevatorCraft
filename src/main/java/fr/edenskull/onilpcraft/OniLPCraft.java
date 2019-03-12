@@ -1,5 +1,6 @@
 package fr.edenskull.onilpcraft;
 
+import fr.edenskull.onilpcraft.commands.AdmCommand;
 import fr.edenskull.onilpcraft.commands.LpCommand;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -10,6 +11,7 @@ public final class OniLPCraft extends JavaPlugin {
 		// Plugin startup logic
 		System.out.println("Plugin OniLPCraft Enable");
 		this.getCommand("lp").setExecutor(new LpCommand(this));
+		this.getCommand("adm").setExecutor(new AdmCommand(this));
 	}
 
 	@Override
