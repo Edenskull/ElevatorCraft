@@ -6,8 +6,5 @@ authors: [Edenskull]
 description: Plugin for basics LP Commands
 commands:
   lp:
-    description: This is the main LP command
-    usage: /lp
-  adm:
-    description: This is the adm command
-    usage: /adm
+    description: This command will give you the basic stuff for a Let's Play
+    usage: "Usage: /<lp>"
