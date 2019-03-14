@@ -20,8 +20,16 @@ public class AdmCommand implements CommandExecutor {
 		if (sender instanceof Player) {
 			Player player = (Player) sender;
 			if (args[0].equalsIgnoreCase("broadcast")) {
-				//TODO Implements title method
-				Bukkit.getOnlinePlayers().forEach(receiver -> receiver.sendTitle());
+				if (args.length > 2) {
+					String s = "";
+					for (int x = 2; x < args.length; x++){
+						s = s.concat(args[x] + " ");
+					}
+					final String message = s;
+					Bukkit.getOnlinePlayers().forEach(receiver -> receiver.sendTitle(args[1], message, 5, 20, 5));
+				} else {
+					sender.sendMessage("Too few arguments");
+				}
 			}
 		} else {
 			sender.sendMessage("You are not a player");

@@ -8,3 +8,6 @@ commands:
   lp:
     description: This is the main LP command
     usage: /lp
+  adm:
+    description: This is the adm command
+    usage: /adm
