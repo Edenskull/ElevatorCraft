@@ -13,7 +13,8 @@ public class CoolTrigger implements Listener {
 	public void onPlayerEnterNether(PlayerPortalEvent event) {
 		if (event.getCause().equals(PlayerTeleportEvent.TeleportCause.NETHER_PORTAL)) {
 			if (event.getTo().getWorld().getEnvironment().equals(World.Environment.NETHER)) {
-				Bukkit.getOnlinePlayers().forEach();
+				final String title = event.getPlayer().getDisplayName() + " enter the nether world";
+				Bukkit.getOnlinePlayers().forEach(receiver -> receiver.sendTitle(title, "", 15, 50, 15));
 			}
 		}
 	}
