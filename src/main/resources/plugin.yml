@@ -8,3 +8,6 @@ commands:
   lp:
     description: This command will give you the basic stuff for a Let's Play
     usage: "Usage: /<lp>"
+  clearchunk:
+    description: This command will erase a whole chunk to from the bedrock to the sky
+    usage: "Usage: /<clearchunk>"
