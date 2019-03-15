@@ -37,11 +37,14 @@ public class LpCommand implements CommandExecutor {
 			inventory.setItem(1, createPickaxeSilk());
 			inventory.setItem(2, createPickaxeSpeed());
 			inventory.setItem(3, createAxe());
+			inventory.setItem(4, createBow());
+			inventory.setItem(5, createShovel());
+			inventory.setItem(6, createWings());
+			return true;
 		} else {
 			sender.sendMessage("You are not a player");
 			return false;
 		}
-		return false;
 	}
 
 	private ItemStack createSword() {
@@ -53,6 +56,7 @@ public class LpCommand implements CommandExecutor {
 		ItemStack item = new ItemStack(Material.DIAMOND_SWORD);
 		ItemMeta meta = item.getItemMeta();
 
+		assert meta != null;
 		meta.setDisplayName(swordName);
 		meta.setLore(lores);
 		meta.setUnbreakable(true);
@@ -76,6 +80,7 @@ public class LpCommand implements CommandExecutor {
 		ItemStack item = new ItemStack(Material.DIAMOND_PICKAXE);
 		ItemMeta meta = item.getItemMeta();
 
+		assert meta != null;
 		meta.setDisplayName(pickaxeName);
 		meta.setLore(lores);
 		meta.setUnbreakable(true);
@@ -97,6 +102,7 @@ public class LpCommand implements CommandExecutor {
 		ItemStack item = new ItemStack(Material.DIAMOND_PICKAXE);
 		ItemMeta meta = item.getItemMeta();
 
+		assert meta != null;
 		meta.setDisplayName(pickaxeName);
 		meta.setLore(lores);
 		meta.setUnbreakable(true);
@@ -118,6 +124,7 @@ public class LpCommand implements CommandExecutor {
 		ItemStack item = new ItemStack(Material.DIAMOND_AXE);
 		ItemMeta meta = item.getItemMeta();
 
+		assert meta != null;
 		meta.setDisplayName(axeName);
 		meta.setLore(lores);
 		meta.setUnbreakable(true);
@@ -129,8 +136,50 @@ public class LpCommand implements CommandExecutor {
 		return item;
 	}
 
+	private ItemStack createShovel() {
+		String shovelName = (ChatColor.RED + "LP Shovel");
+		List<String> lores = new ArrayList<>();
+		String lore = (ChatColor.AQUA + "Dig dug ? Do you know that ?");
+		lores.add(lore);
+
+		ItemStack item = new ItemStack(Material.DIAMOND_SHOVEL);
+		ItemMeta meta = item.getItemMeta();
+
+		assert meta != null;
+		meta.setDisplayName(shovelName);
+		meta.setLore(lores);
+		meta.setUnbreakable(true);
+
+		meta.addEnchant(Enchantment.DIG_SPEED, 10, true);
+		meta.addEnchant(Enchantment.MENDING, 1, false);
+		meta.addEnchant(Enchantment.LOOT_BONUS_BLOCKS, 10, true);
+
+		item.setItemMeta(meta);
+		return item;
+	}
+
+	private ItemStack createWings() {
+		String wingsName = (ChatColor.RED + "LP Wings");
+		List<String> lores = new ArrayList<>();
+		String lore = (ChatColor.AQUA + "This mustache.");
+		lores.add(lore);
+
+		ItemStack item = new ItemStack(Material.ELYTRA);
+		ItemMeta meta = item.getItemMeta();
+
+		assert meta != null;
+		meta.setDisplayName(wingsName);
+		meta.setLore(lores);
+		meta.setUnbreakable(true);
+
+		meta.addEnchant(Enchantment.MENDING, 1, false);
+
+		item.setItemMeta(meta);
+		return item;
+	}
+
 	private ItemStack createHelmet() {
-		String axeName = (ChatColor.RED + "LP Helmet");
+		String helmetName = (ChatColor.RED + "LP Helmet");
 		List<String> lores = new ArrayList<>();
 		String lore = (ChatColor.AQUA + "Can block even blood drip at full speed");
 		lores.add(lore);
@@ -138,7 +187,8 @@ public class LpCommand implements CommandExecutor {
 		ItemStack item = new ItemStack(Material.DIAMOND_HELMET);
 		ItemMeta meta = item.getItemMeta();
 
-		meta.setDisplayName(axeName);
+		assert meta != null;
+		meta.setDisplayName(helmetName);
 		meta.setLore(lores);
 		meta.setUnbreakable(true);
 
@@ -164,6 +214,7 @@ public class LpCommand implements CommandExecutor {
 		ItemStack item = new ItemStack(Material.DIAMOND_CHESTPLATE);
 		ItemMeta meta = item.getItemMeta();
 
+		assert meta != null;
 		meta.setDisplayName(chestplateName);
 		meta.setLore(lores);
 		meta.setUnbreakable(true);
@@ -188,6 +239,7 @@ public class LpCommand implements CommandExecutor {
 		ItemStack item = new ItemStack(Material.DIAMOND_LEGGINGS);
 		ItemMeta meta = item.getItemMeta();
 
+		assert meta != null;
 		meta.setDisplayName(leggingsName);
 		meta.setLore(lores);
 		meta.setUnbreakable(true);
@@ -212,6 +264,7 @@ public class LpCommand implements CommandExecutor {
 		ItemStack item = new ItemStack(Material.DIAMOND_BOOTS);
 		ItemMeta meta = item.getItemMeta();
 
+		assert meta != null;
 		meta.setDisplayName(leggingsName);
 		meta.setLore(lores);
 		meta.setUnbreakable(true);
@@ -224,6 +277,29 @@ public class LpCommand implements CommandExecutor {
 		meta.addEnchant(Enchantment.THORNS, 10, true);
 		meta.addEnchant(Enchantment.DEPTH_STRIDER, 3, false);
 		meta.addEnchant(Enchantment.PROTECTION_FALL, 10, true);
+
+		item.setItemMeta(meta);
+		return item;
+	}
+
+	private ItemStack createBow() {
+		String bowName = (ChatColor.RED + "LP Bow");
+		List<String> lores = new ArrayList<>();
+		String lore = (ChatColor.AQUA + "Clearly add some fun for the ennemies");
+		lores.add(lore);
+
+		ItemStack item = new ItemStack(Material.BOW);
+		ItemMeta meta = item.getItemMeta();
+
+		assert meta != null;
+		meta.setDisplayName(bowName);
+		meta.setLore(lores);
+		meta.setUnbreakable(true);
+
+		meta.addEnchant(Enchantment.MENDING, 1, false);
+		meta.addEnchant(Enchantment.ARROW_FIRE, 1, false);
+		meta.addEnchant(Enchantment.ARROW_INFINITE, 1, false);
+		meta.addEnchant(Enchantment.ARROW_DAMAGE, 10, true);
 
 		item.setItemMeta(meta);
 		return item;

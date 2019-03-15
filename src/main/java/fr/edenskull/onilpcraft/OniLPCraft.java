@@ -11,7 +11,7 @@ public final class OniLPCraft extends JavaPlugin {
 		// Plugin startup logic
 		System.out.println("Plugin OniLPCraft Enable");
 		this.getCommand("lp").setExecutor(new LpCommand(this));
-		getServer().getPluginManager().registerEvents(new CoolTrigger(), this);
+		this.getServer().getPluginManager().registerEvents(new CoolTrigger(this), this);
 	}
 
 	@Override
